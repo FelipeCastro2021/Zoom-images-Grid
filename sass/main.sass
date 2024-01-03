@@ -31,19 +31,22 @@ button
   background: transparent
 
 .grid
-  $s: 150px
   $g: 10px
   $f: 1.5
+
   $columns: 4
   $rows: 4
+
+  $width: 150px
+  $height: 120px
 
   display: grid
   gap: $g
   grid-template-columns: repeat($columns, auto)
   aspect-ratio: 1
 
-  width: calc($s * $columns + $g * ($columns - 1))
-  height: calc($s * $rows + $g * ($rows - 1))
+  width: calc($width * $columns + $g * ($columns - 1))
+  height: calc($height * $rows + $g * ($rows - 1))
 
   img
     width: 0
@@ -51,8 +54,12 @@ button
     min-height: 100%
     min-width: 100%
 
+    filter: grayscale(80%)
+
     transition: .3s linear
 
     &:hover
-      width: calc($s * $f)
-      height: calc($s * $f)
+      width: calc($width * $f)
+      height: calc($width * $f)
+
+      filter: grayscale(0) saturate(110%)
