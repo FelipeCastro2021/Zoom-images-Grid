@@ -39,9 +39,10 @@ button {
 .grid {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   aspect-ratio: 1;
-  width: 470px;
+  width: 630px;
+  height: 630px;
 }
 .grid img {
   width: 0;

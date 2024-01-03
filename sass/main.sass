@@ -34,13 +34,16 @@ button
   $s: 150px
   $g: 10px
   $f: 1.5
+  $columns: 4
+  $rows: 4
 
   display: grid
   gap: $g
-  grid-template-columns: repeat(3, auto)
+  grid-template-columns: repeat($columns, auto)
   aspect-ratio: 1
 
-  width: calc($s * 3 + $g * 2)
+  width: calc($s * $columns + $g * ($columns - 1))
+  height: calc($s * $rows + $g * ($rows - 1))
 
   img
     width: 0
