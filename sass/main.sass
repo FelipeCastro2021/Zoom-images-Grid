@@ -33,6 +33,7 @@ button
 .grid
   $s: 150px
   $g: 10px
+  $f: 1.5
 
   display: grid
   gap: $g
@@ -46,3 +47,9 @@ button
     height: 0
     min-height: 100%
     min-width: 100%
+
+    transition: .3s linear
+
+    &:hover
+      width: calc($s * $f)
+      height: calc($s * $f)
