@@ -29,6 +29,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 button {
@@ -38,24 +39,24 @@ button {
 
 .grid {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, auto);
-  aspect-ratio: 1;
+  grid-template-columns: repeat(5, auto);
+  gap: 0;
   width: 100vw;
   height: 100vh;
 }
 .grid img {
-  width: 0;
   height: 0;
-  min-height: 100%;
+  width: 0;
   min-width: 100%;
-  filter: grayscale(80%);
+  min-height: 100%;
+  filter: grayscale(60%);
+  cursor: pointer;
   transition: 0.3s linear;
 }
 .grid img:hover {
-  width: 30vw;
-  height: 30vw;
-  filter: grayscale(0) saturate(110%);
+  width: 16vw;
+  height: 16vh;
+  filter: grayscale(0) saturate(150%) contrast(120%);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=expansive-panels.css.map */
